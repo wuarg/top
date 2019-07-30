@@ -1,17 +1,17 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
 // 解决build后keep-live不生效,路由懒加载
-const _import = require('./_import_' + process.env.NODE_ENV)
+const _import = require("./_import_" + process.env.NODE_ENV);
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-	    path: '/',
-	    name: 'hello',
-	    component: _import('hello')
-    },
+      path: "/",
+      name: "index",
+      component: _import("index")
+    }
   ]
-})
+});
